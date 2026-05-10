@@ -6,7 +6,7 @@ from fastapi.staticfiles import StaticFiles
 from slowapi import Limiter
 from slowapi.util import get_remote_address
 from slowapi.middleware import SlowAPIMiddleware
-from backend.database import init_db
+from database import init_db
 from routes.public import router as public_router
 from routes.admin import router as admin_router
 
