@@ -6,9 +6,9 @@ from fastapi.staticfiles import StaticFiles
 from slowapi import Limiter
 from slowapi.util import get_remote_address
 from slowapi.middleware import SlowAPIMiddleware
-from database import init_db
-from routes.public import router as public_router
-from routes.admin import router as admin_router
+from backend.database import init_db
+from backend.routes.public import router as public_router
+from backend.routes.admin import router as admin_router
 
 app = FastAPI(title='Portal Emancipação IFA', version='1.0.0')
 app.state.limiter = Limiter(key_func=get_remote_address)

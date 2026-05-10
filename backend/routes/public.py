@@ -1,7 +1,7 @@
 import os
 from fastapi import APIRouter, Request, Form, HTTPException
-from database import get_connection
-from services.audit import term_hash
+from backend.database import get_connection
+from backend.services.audit import term_hash
 
 router = APIRouter()
 VALID_PERIODS = {9,14,20}

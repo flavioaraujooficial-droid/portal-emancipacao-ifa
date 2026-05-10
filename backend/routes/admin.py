@@ -2,8 +2,8 @@ from fastapi import APIRouter, Request, Form
 from fastapi.responses import JSONResponse
 from slowapi import Limiter
 from slowapi.util import get_remote_address
-from database import get_connection
-from auth import authenticate_admin, create_admin_token, require_admin
+from backend.database import get_connection
+from backend.auth import authenticate_admin, create_admin_token, require_admin
 
 router = APIRouter()
 limiter = Limiter(key_func=get_remote_address)
