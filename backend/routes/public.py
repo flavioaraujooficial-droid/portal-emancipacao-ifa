@@ -1,6 +1,6 @@
 import os
 from fastapi import APIRouter, Request, Form, HTTPException
-from backend.database import get_connection
+from database import get_connection
 from backend.services.audit import term_hash
 
 router = APIRouter()
