@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Soberania Territorial | Instituto IFA</title>
+  <meta name="description" content="Mapa territorial da Bahia, pertencimento regional e compromisso público com desenvolvimento humano.">
+  <link rel="stylesheet" href="/css/soberania-territorial.css">
+</head>
+<body>
+<header class="territory-hero">
+  <nav class="topbar">
+    <a class="brand" href="/">Instituto IFA</a>
+    <div class="toplinks">
+      <a href="/">Portal</a>
+      <a href="/do-0-a-2">Manifesto 0 a 2</a>
+      <a href="/termo-bahia">Constituição Digital</a>
+    </div>
+  </nav>
+  <div class="hero-inner">
+    <p class="kicker">Soberania Territorial • Bahia</p>
+    <h1>A sua cidade não tem preço. Tem valor.</h1>
+    <p class="lead">Um mapa vivo para enxergar a Bahia por seus territórios, suas vocações econômicas, sua juventude e sua capacidade de se representar com dignidade.</p>
+    <a class="btn primary" href="#mapa">Explorar territórios</a>
+  </div>
+</header>
+
+<main>
+<section class="section intro">
+  <div class="container">
+    <p class="overline">Manifesto da Terra</p>
+    <h2>Proteja o seu território. Valorize quem vive nele.</h2>
+    <p>Desenvolvimento territorial começa quando o povo reconhece o valor da própria região e exige compromisso público com educação, esporte, cultura, trabalho e futuro.</p>
+  </div>
+</section>
+
+<section class="section map-section" id="mapa">
+  <div class="container map-grid">
+    <div class="map-panel">
+      <div class="map-header"><span>Mapa interativo</span><strong>27 Territórios de Identidade</strong></div>
+      <div class="mobile-select">
+        <label for="territorySelect">Escolha seu território</label>
+        <select id="territorySelect"></select>
+      </div>
+      <svg class="bahia-map" viewBox="0 0 520 620" role="img" aria-label="Mapa simbólico dos territórios da Bahia">
+        <rect width="520" height="620" rx="34" fill="#eef2f7"></rect>
+        <g id="territoryShapes"></g>
+      </svg>
+      <p class="map-note">Mapa visual simbólico para navegação. A versão cartográfica oficial pode ser integrada depois com SVG georreferenciado.</p>
+    </div>
+
+    <aside class="identity-card" id="identityCard">
+      <p class="overline">Card de identidade</p>
+      <h2 id="territoryName">Litoral Norte e Agreste Baiano</h2>
+      <p class="territory-copy" id="territoryCopy">Território estratégico de conexão, agricultura, cultura, educação e mobilização regional.</p>
+      <div class="data-grid">
+        <div class="data-item"><span>Potencial econômico</span><strong id="economicPotential">Agro, indústria, cultura e serviços</strong></div>
+        <div class="data-item"><span>Impacto Do 0 a 2</span><strong id="cdhImpact">2 a 4 CDHs</strong></div>
+      </div>
+      <div class="represent-chart">
+        <div class="chart-title">Representatividade territorial</div>
+        <div class="bar-group"><label>Representante da terra</label><div class="bar"><span id="localBar" style="width:78%"></span></div></div>
+        <div class="bar-group parachute"><label>Político paraquedista</label><div class="bar"><span id="parachuteBar" style="width:28%"></span></div></div>
+        <p>Visual simbólico: quanto mais o território se organiza, menor o espaço para representação sem pertencimento.</p>
+      </div>
+      <blockquote>“A sua cidade não tem preço. Tem valor. Proteja o seu território.”</blockquote>
+      <a class="btn primary full" href="/termo-bahia">VEJA O COMPROMISSO PARA MINHA REGIÃO</a>
+    </aside>
+  </div>
+</section>
+
+<section class="section cards-section">
+  <div class="container">
+    <p class="overline">Alta política territorial</p>
+    <h2>Economia, pertencimento e futuro no mesmo mapa.</h2>
+    <div class="cards">
+      <article class="card"><span>01</span><h3>Economia da Terra</h3><p>Cada região tem vocações próprias: agro, mineral, cultura, turismo, comércio, serviços e indústria local.</p></article>
+      <article class="card"><span>02</span><h3>Do 0 a 2</h3><p>Os Centros de Desenvolvimento Humano conectam educação, esporte, cultura e economia regional.</p></article>
+      <article class="card"><span>03</span><h3>Representação</h3><p>O território precisa ser visto, ouvido e representado por quem conhece sua realidade.</p></article>
+    </div>
+  </div>
+</section>
+</main>
+<script src="/js/soberania-territorial.js"></script>
+</body>
+</html>
