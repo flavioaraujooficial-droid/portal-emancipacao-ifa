@@ -50,3 +50,19 @@
     padding-bottom: 72px;
   }
 }
+
+.header {
+  background: #ffffff;
+  border-bottom: 4px solid #F4C430;
+}
+
+.logo {
+  color: #0A1F44;
+  font-weight: 900;
+}
+
+.header .btn-light {
+  border: 2px solid #F4C430;
+  color: #0A1F44;
+  background: #fff;
+}
