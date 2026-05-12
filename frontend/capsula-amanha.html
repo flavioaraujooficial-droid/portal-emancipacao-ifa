@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>A Cápsula do Amanhã | Instituto IFA</title>
+  <meta name="description" content="Grave seu compromisso com o seu próprio futuro e deposite sua voz na Cápsula do Amanhã.">
+  <link rel="stylesheet" href="/css/capsula-amanha.css">
+</head>
+<body>
+  <main class="capsule-page">
+    <section class="capsule-hero">
+      <nav class="topbar">
+        <a href="/" class="brand">Instituto IFA</a>
+        <div class="toplinks">
+          <a href="/">Portal</a>
+          <a href="/do-0-a-2">Manifesto</a>
+          <a href="/soberania-territorial">Territórios</a>
+        </div>
+      </nav>
+
+      <div class="particles" aria-hidden="true"></div>
+
+      <div class="hero-inner">
+        <p class="kicker">Memória • Futuro • Legado</p>
+        <h1>A Cápsula do Amanhã</h1>
+        <p class="impact">Sua ambição não pode esperar o sistema mudar.</p>
+        <p class="lead">Grave aqui o seu compromisso com o seu próprio futuro. Como você estará em 9, 14 ou 20 anos? Você escolhe quando sua voz será devolvida ao mundo.</p>
+      </div>
+    </section>
+
+    <section class="ritual-section">
+      <div class="ritual-card">
+        <div class="record-stage">
+          <button class="record-button" id="recordButton" type="button"><span>🎙️</span></button>
+          <canvas id="waveform" width="720" height="120"></canvas>
+          <p class="record-status" id="recordStatus">Toque para iniciar seu depoimento para a história.</p>
+          <div class="record-actions">
+            <button class="small-btn" id="stopButton" type="button" disabled>Finalizar gravação</button>
+            <button class="small-btn ghost" id="resetButton" type="button">Recomeçar</button>
+          </div>
+        </div>
+
+        <form class="capsule-form" id="capsuleForm">
+          <div class="field-grid">
+            <label>Nome<input name="nome" required placeholder="Seu nome"></label>
+            <label>Território<input name="territorio" required placeholder="Ex: Litoral Norte e Agreste Baiano"></label>
+          </div>
+
+          <label>Mensagem escrita opcional
+            <textarea name="mensagem" placeholder="Se preferir escrever, registre aqui sua realidade, sonho ou compromisso."></textarea>
+          </label>
+
+          <div class="time-seal">
+            <p class="section-label">O selo do futuro</p>
+            <h2>Escolha o ano de abertura</h2>
+            <div class="year-options">
+              <label><input type="radio" name="ano" value="2035" required><span>2035 <small>9 anos</small></span></label>
+              <label><input type="radio" name="ano" value="2040"><span>2040 <small>14 anos</small></span></label>
+              <label><input type="radio" name="ano" value="2046"><span>2046 <small>20 anos</small></span></label>
+            </div>
+          </div>
+
+          <button class="btn primary full" type="submit">Selar minha Cápsula</button>
+        </form>
+      </div>
+
+      <div class="sealing hidden" id="sealing">
+        <div class="seal-orb"></div>
+        <p id="sealText">Protegendo sua mensagem para o futuro...</p>
+      </div>
+
+      <div class="certificate hidden" id="certificate">
+        <div class="cert-watermark">IFA</div>
+        <p class="kicker dark">Certificado de Depósito Temporal</p>
+        <h2>Seu compromisso agora pertence ao amanhã.</h2>
+        <p id="certSummary"></p>
+        <div class="qr" id="qrCode"></div>
+        <p class="hash" id="certHash"></p>
+        <div class="cert-actions">
+          <button class="btn primary" onclick="window.print()">Salvar / Imprimir PDF</button>
+          <a class="btn secondary" href="/soberania-territorial">Ver meu território</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="/js/capsula-amanha.js"></script>
+</body>
+</html>
