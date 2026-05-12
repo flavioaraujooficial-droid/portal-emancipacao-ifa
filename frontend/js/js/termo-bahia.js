@@ -1,8 +1,0 @@
-const progress=document.getElementById('readingProgress');
-window.addEventListener('scroll',()=>{const h=document.documentElement;const pct=(h.scrollTop)/(h.scrollHeight-h.clientHeight)*100;progress.style.width=pct+'%';});
-const links=[...document.querySelectorAll('.toc-link')];
-const sections=links.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);
-window.addEventListener('scroll',()=>{let current=sections[0]?.id;sections.forEach(sec=>{if(sec.getBoundingClientRect().top<180) current=sec.id});links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+current));});
-function simpleHash(text){let h=0;for(let i=0;i<text.length;i++){h=(Math.imul(31,h)+text.charCodeAt(i))|0;}return 'IFA-'+Math.abs(h).toString(16).toUpperCase()+'-'+Date.now().toString(36).toUpperCase();}
-const form=document.getElementById('signatureForm');
-form?.addEventListener('submit',(e)=>{e.preventDefault();const data=new FormData(form);const nome=data.get('nome');const cargo=data.get('cargo');const territorio=data.get('territorio');const cidade=data.get('cidade');const now=new Date().toLocaleString('pt-BR');const hash=simpleHash(`${nome}|${cargo}|${territorio}|${cidade}|${now}`);document.getElementById('receiptText').textContent=`${nome}, ${cargo}, de ${cidade}/${territorio}, registrou adesão visual ao Termo de Compromisso pela Bahia em ${now}.`;document.getElementById('receiptHash').textContent=`Hash visual do comprovante: ${hash}`;document.getElementById('receipt').classList.remove('hidden');document.getElementById('receipt').scrollIntoView({behavior:'smooth',block:'center'});});
