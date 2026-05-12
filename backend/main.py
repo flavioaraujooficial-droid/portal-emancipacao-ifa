@@ -53,7 +53,11 @@ async def termo(): return FileResponse(FRONTEND / 'termo.html')
 
 @app.get('/soberania-territorial')
 async def soberania_territorial():
-    return FileResponse(FRONTEND / 'soberania-territorial.html')
+    return FileResponse(FRONTEND / 'soberania-territorial.html') 
+
+@app.get('/capsula-amanha')
+async def capsula_amanha():
+    return FileResponse(FRONTEND / 'capsula-amanha.html')
 
 @app.get('/termo-bahia')
 async def termo_bahia():
