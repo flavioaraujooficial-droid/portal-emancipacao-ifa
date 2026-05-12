@@ -52,7 +52,15 @@ async def capsula(): return FileResponse(FRONTEND / 'capsula.html')
 async def termo(): return FileResponse(FRONTEND / 'termo.html')
 
 @app.get('/signatarios')
-async def signatarios(): return FileResponse(FRONTEND / 'signatarios.html')
+async def signatarios(): return FileResponse(FRONTEND / 'signatarios.html') 
+
+@app.get('/do-0-a-2.html')
+async def do_0_a_2_html():
+    return FileResponse(FRONTEND / 'do-0-a-2.html')
+
+@app.get('/do-0-a-2')
+async def do_0_a_2():
+    return FileResponse(FRONTEND / 'do-0-a-2.html')
 
 @app.get('/painel-secretario')
 async def painel(): return FileResponse(FRONTEND / 'admin.html')
