@@ -49,7 +49,11 @@ async def index(): return FileResponse(FRONTEND / 'index.html')
 async def capsula(): return FileResponse(FRONTEND / 'capsula.html')
 
 @app.get('/termo')
-async def termo(): return FileResponse(FRONTEND / 'termo.html')
+async def termo(): return FileResponse(FRONTEND / 'termo.html') 
+
+@app.get('/termo-bahia')
+async def termo_bahia():
+    return FileResponse(FRONTEND / 'termo-bahia.html')
 
 @app.get('/signatarios')
 async def signatarios(): return FileResponse(FRONTEND / 'signatarios.html') 
