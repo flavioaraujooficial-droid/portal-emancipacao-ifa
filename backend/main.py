@@ -68,7 +68,23 @@ async def signatarios(): return FileResponse(FRONTEND / 'signatarios.html')
 
 @app.get('/do-0-a-2.html')
 async def do_0_a_2_html():
-    return FileResponse(FRONTEND / 'do-0-a-2.html')
+    return FileResponse(FRONTEND / 'do-0-a-2.html')  
+
+@app.get('/bahia-sem-privilegios')
+async def bahia_sem_privilegios():
+    return FileResponse(FRONTEND / 'bahia-sem-privilegios.html')
+
+@app.get('/cenarios-de-vitoria')
+async def cenarios_de_vitoria():
+    return FileResponse(FRONTEND / 'cenarios-de-vitoria.html')
+
+@app.get('/bahia-417')
+async def bahia_417():
+    return FileResponse(FRONTEND / 'bahia-417.html')
+
+@app.get('/bahia-sustentavel')
+async def bahia_sustentavel():
+    return FileResponse(FRONTEND / 'bahia-sustentavel.html')
 
 @app.get('/do-0-a-2')
 async def do_0_a_2():
