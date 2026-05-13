@@ -1,0 +1,19 @@
+<!doctype html><html lang="pt-BR"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pulso Territorial | Instituto Flávio Araújo</title>
+<link rel="stylesheet" href="/css/pulso-territorial.css"></head><body>
+<header class="pulse-header"><a class="brand" href="/">Instituto Flávio Araújo</a><nav><a href="/">Início</a><a href="/soberania-territorial">Soberania</a><a href="/signatarios">Signatários</a></nav></header>
+<main>
+<section class="hero"><p class="eyebrow">Pulso Territorial • Rastro Oficial</p><h1>O site será o rastro público da travessia.</h1><p>A jornada pela Bahia registrada com transparência, baixo custo e leveza técnica.</p></section>
+<section class="dashboard">
+<article class="map-card"><div class="map-head"><div><p class="eyebrow dark">Mapa da Jornada</p><h2>Rota territorial em andamento</h2></div><span class="live-badge">AO VIVO / DELAY SEGURO</span></div>
+<div class="map-visual"><div class="route-line"></div><button class="city active" style="left:16%;top:68%">Alagoinhas</button><button class="city" style="left:24%;top:56%">Feira</button><button class="city" style="left:42%;top:42%">Chapada</button><button class="city" style="left:63%;top:36%">Oeste</button><button class="city" style="left:70%;top:72%">Sul</button><button class="city" style="left:38%;top:78%">Salvador</button><div class="movement-icon" id="movementIcon">●</div></div>
+<p class="note">Alpha visual. Para segurança, recomenda-se localização com atraso e sem precisão exata.</p></article>
+<aside class="fuel-card"><p class="eyebrow dark">Termômetro de Soberania</p><h2>Combustível da travessia</h2><div class="km-number"><strong id="kmDone">0</strong><span>/ 4.500 km</span></div><div class="progress"><span id="progressBar"></span></div><p>Contribuição simbólica para manter a jornada em movimento.</p><a class="pix-btn" id="pixBtn" href="#" target="_blank">Abasteça um Quilômetro</a><small>Configure o PIX no JS.</small></aside>
+</section>
+<section class="war-diary"><div class="section-title"><p class="eyebrow dark">Diário de Guerra Mobile</p><h2>Registro cru do solo.</h2><p>Postagens ficam enfileiradas no aparelho e sobem quando houver sinal.</p></div>
+<form id="diaryForm" class="diary-form"><label>Título<input name="titulo" required placeholder="Reunião em comunidade"></label><label>Território/Cidade<input name="local" required placeholder="Agreste Baiano"></label><label>Mensagem<textarea name="mensagem" placeholder="Registro breve..."></textarea></label><label>Foto ou áudio<input name="arquivo" type="file" accept="image/*,audio/*"></label><button type="submit">Salvar no diário</button></form>
+<div class="queue-box"><h3>Fila local</h3><p id="queueStatus">Nenhum registro pendente.</p><button id="syncBtn" type="button">Tentar sincronizar</button></div></section>
+<section class="cities"><p class="eyebrow dark">57 cidades-chave</p><h2>Sedes territoriais e rota de escuta.</h2><div class="city-list" id="cityList"></div></section>
+</main><footer class="pulse-footer"><strong>Instituto Flávio Araújo</strong><span>Rastro oficial da jornada territorial</span></footer>
+<script src="/js/pulso-territorial.js"></script></body></html>
