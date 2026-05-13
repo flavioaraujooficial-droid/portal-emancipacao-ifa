@@ -1,1 +1,62 @@
-<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Signatários</title><link rel="stylesheet" href="/css/style.css"></head><body><header class="header"><div class="container top"><a class="logo" href="/">Portal Emancipação IFA</a><nav class="nav"><a href="/capsula">Cápsula</a><a href="/termo">Termo</a><a href="/signatarios">Signatários</a></nav></div></header><section class="section"><div class="container"><span class="eyebrow">Transparência</span><h1 style="color:var(--azul)">Candidatos que assinaram o compromisso.</h1><p class="lead">Lista pública por cargo. Todos podem assinar. Quem escolhe o eleito é o eleitor.</p><div class="list-tabs"><button class="tab active" data-office="governador">Governador</button><button class="tab" data-office="senado">Senado</button><button class="tab" data-office="deputado_federal">Deputado Federal</button><button class="tab" data-office="deputado_estadual">Deputado Estadual</button></div><div id="signatoriesList" class="cards"></div></div></section><script src="/js/app.js"></script></body></html>
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Signatários | Instituto Flávio Araújo</title>
+  <meta name="description" content="Lista pública de signatários do Termo de Compromisso pela Bahia.">
+  <link rel="stylesheet" href="/css/signatarios-oficial.css">
+</head>
+<body>
+<header class="sig-header">
+  <a class="brand" href="/">Instituto Flávio Araújo</a>
+  <nav>
+    <a href="/">Início</a>
+    <a href="/termo-bahia">Constituição Digital</a>
+    <a href="/soberania-territorial">Territórios</a>
+  </nav>
+</header>
+
+<main>
+  <section class="sig-hero">
+    <p class="eyebrow">Transparência • Compromisso • Validação Pública</p>
+    <h1>Signatários do Termo pela Bahia</h1>
+    <p>Lista pública, organizada por cargo, das pessoas que assumiram compromisso auditável com a Bahia.</p>
+  </section>
+
+  <section class="validate-panel">
+    <div>
+      <p class="eyebrow dark">Validação de assinatura</p>
+      <h2>Verifique a autenticidade de um compromisso.</h2>
+      <p>Insira o código/hash do comprovante para consultar o registro público da assinatura.</p>
+    </div>
+    <form id="validateForm" class="validate-form">
+      <input id="hashInput" placeholder="Ex: IFA-TERMO-2026-XXXX" required>
+      <button type="submit">Validar assinatura</button>
+    </form>
+    <div class="validation-result hidden" id="validationResult"></div>
+  </section>
+
+  <section class="filters">
+    <button class="filter active" data-cargo="todos">Todos</button>
+    <button class="filter" data-cargo="Presidente">Presidente</button>
+    <button class="filter" data-cargo="Vice-presidente">Vice-presidente</button>
+    <button class="filter" data-cargo="Governador">Governador</button>
+    <button class="filter" data-cargo="Vice-governador">Vice-governador</button>
+    <button class="filter" data-cargo="Senador">Senador</button>
+    <button class="filter" data-cargo="Deputado Federal">Deputado Federal</button>
+    <button class="filter" data-cargo="Deputado Estadual">Deputado Estadual</button>
+  </section>
+
+  <section class="count-line"><strong id="totalCount">0</strong><span>signatários exibidos</span></section>
+  <section class="signatory-grid" id="signatoryGrid"></section>
+</main>
+
+<footer class="sig-footer">
+  <strong>Instituto Flávio Araújo</strong>
+  <span>Termo de Compromisso pela Bahia • Registro público e auditável</span>
+</footer>
+
+<script src="/js/signatarios-oficial.js"></script>
+</body>
+</html>
