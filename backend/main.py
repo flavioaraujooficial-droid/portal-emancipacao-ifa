@@ -95,5 +95,10 @@ async def bahia_417():
 
 @app.get('/bahia-sustentavel')
 async def bahia_sustentavel():
-    return FileResponse(FRONTEND / 'bahia-sustentavel.html')
+    return FileResponse(FRONTEND / 'bahia-sustentavel.html') 
+
+@app.get('/pulso-territorial')
+async def pulso_territorial():
+    return FileResponse(FRONTEND / 'pulso-territorial.html')
+
 
