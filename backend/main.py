@@ -70,6 +70,17 @@ async def signatarios(): return FileResponse(FRONTEND / 'signatarios.html')
 async def do_0_a_2_html():
     return FileResponse(FRONTEND / 'do-0-a-2.html')  
 
+
+@app.get('/do-0-a-2')
+async def do_0_a_2():
+    return FileResponse(FRONTEND / 'do-0-a-2.html')
+
+@app.get('/painel-secretario')
+async def painel(): return FileResponse(FRONTEND / 'admin.html')
+
+@app.get('/health')
+async def health(): return {'status': 'operacional', 'projeto': 'IFA'} 
+
 @app.get('/bahia-sem-privilegios')
 async def bahia_sem_privilegios():
     return FileResponse(FRONTEND / 'bahia-sem-privilegios.html')
@@ -86,12 +97,3 @@ async def bahia_417():
 async def bahia_sustentavel():
     return FileResponse(FRONTEND / 'bahia-sustentavel.html')
 
-@app.get('/do-0-a-2')
-async def do_0_a_2():
-    return FileResponse(FRONTEND / 'do-0-a-2.html')
-
-@app.get('/painel-secretario')
-async def painel(): return FileResponse(FRONTEND / 'admin.html')
-
-@app.get('/health')
-async def health(): return {'status': 'operacional', 'projeto': 'IFA'}
