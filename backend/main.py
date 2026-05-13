@@ -101,7 +101,9 @@ async def bahia_sustentavel():
 async def pulso_territorial():
     arquivo = FRONTEND / 'pulso-territorial.html'
     if not arquivo.exists():
-        return {'erro': 'Arquivo pulso-territorial.html não encontrado', 'caminho': str(arquivo)}
+        return {
+            'erro': 'Arquivo pulso-territorial.html não encontrado',
+            'caminho': str(arquivo)
+        }
     return FileResponse(arquivo)
-
 
