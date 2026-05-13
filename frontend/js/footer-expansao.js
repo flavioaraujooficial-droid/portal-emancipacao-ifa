@@ -1,0 +1,1 @@
+console.log('Centro de Expansão carregado.');
