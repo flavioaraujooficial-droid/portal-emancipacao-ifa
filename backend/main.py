@@ -95,7 +95,8 @@ async def bahia_417():
 
 @app.get('/bahia-sustentavel')
 async def bahia_sustentavel():
-    return FileResponse(FRONTEND / 'bahia-sustentavel.html') 
+    return FileResponse(FRONTEND / 'bahia-sustentavel.html')
+
 
 @app.get('/pulso-territorial')
 async def pulso_territorial():
@@ -103,15 +104,17 @@ async def pulso_territorial():
     if not arquivo.exists():
         return {
             'erro': 'Arquivo pulso-territorial.html não encontrado',
-            'caminho': str(arquivo) 
-     @app.get('/representacao-popular')
-async def representacao_popular():
-    return FileResponse(FRONTEND / 'representacao-popular.html')       
+            'caminho': str(arquivo)
         }
-    return FileResponse(arquivo) 
+    return FileResponse(arquivo)
+
+
+@app.get('/representacao-popular')
+async def representacao_popular():
+    return FileResponse(FRONTEND / 'representacao-popular.html')
+
 
 @app.get('/eixos-estrategicos')
 async def eixos_estrategicos():
     return FileResponse(FRONTEND / 'eixos-estrategicos.html')
-
 
