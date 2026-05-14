@@ -103,7 +103,10 @@ async def pulso_territorial():
     if not arquivo.exists():
         return {
             'erro': 'Arquivo pulso-territorial.html não encontrado',
-            'caminho': str(arquivo)
+            'caminho': str(arquivo) 
+     @app.get('/representacao-popular')
+async def representacao_popular():
+    return FileResponse(FRONTEND / 'representacao-popular.html')       
         }
     return FileResponse(arquivo) 
 
