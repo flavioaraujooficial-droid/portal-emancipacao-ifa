@@ -117,6 +117,3 @@ async def representacao_popular():
 @app.get('/eixos-estrategicos')
 async def eixos_estrategicos():
     return FileResponse(FRONTEND / 'eixos-estrategicos.html')
-
-@app.get('/representacao-popular')
-
