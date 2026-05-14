@@ -105,5 +105,10 @@ async def pulso_territorial():
             'erro': 'Arquivo pulso-territorial.html não encontrado',
             'caminho': str(arquivo)
         }
-    return FileResponse(arquivo)
+    return FileResponse(arquivo) 
+
+@app.get('/eixos-estrategicos')
+async def eixos_estrategicos():
+    return FileResponse(FRONTEND / 'eixos-estrategicos.html')
+
 
