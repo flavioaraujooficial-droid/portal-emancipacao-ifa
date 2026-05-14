@@ -1,0 +1,24 @@
+
+(function(){
+const answers={
+instituto:{title:"O que é o Instituto?",text:"O Instituto Flávio Araújo é uma iniciativa institucional voltada à participação pública, desenvolvimento humano, inteligência territorial e fortalecimento da governança cidadã na Bahia.",audio:""},
+zeroadois:{title:"O que é o projeto 0 a 2?",text:"O 0 a 2 Possibilidades é uma diretriz de desenvolvimento humano estruturado. A proposta organiza oportunidades educacionais, socioemocionais, culturais e esportivas para jovens da rede pública.",audio:""},
+soberania:{title:"O que é soberania territorial?",text:"Soberania territorial é a capacidade de cada região compreender suas vocações, defender suas prioridades e participar do próprio desenvolvimento com presença institucional, dados e pertencimento.",audio:""},
+participar:{title:"Como participar?",text:"Você pode participar conhecendo os módulos do portal, acompanhando a jornada territorial, enviando sua voz nos espaços de participação e, quando desejar, assinando publicamente os compromissos institucionais disponíveis.",audio:""},
+termo:{title:"Como assinar o termo?",text:"O Termo de Compromisso pela Bahia é uma adesão pública voluntária a princípios de integridade, responsabilidade fiscal e desenvolvimento humano. A assinatura deve ser feita na área oficial do termo e validada pelo registro público.",audio:""},
+jornada:{title:"Como funciona a jornada?",text:"A jornada territorial registra a presença do Instituto nos territórios da Bahia. O objetivo é escutar, documentar, organizar dados e fortalecer a participação pública a partir da realidade local.",audio:""},
+territorios:{title:"O que são os 27 territórios?",text:"Os 27 Territórios de Identidade são uma forma de compreender a Bahia a partir de suas regiões, culturas, economias e desafios. Eles ajudam a organizar políticas públicas com mais proximidade da vida real das pessoas.",audio:""},
+representatividade:{title:"O que é representatividade territorial?",text:"Representatividade territorial é a presença de pessoas e lideranças conectadas à realidade de suas cidades e regiões. O Instituto trata isso como participação, pertencimento e fortalecimento democrático, sem orientar voto direto.",audio:""}
+};
+function createAssistant(){
+if(document.querySelector('.afa-float'))return;
+const button=document.createElement('button');button.className='afa-float';button.type='button';button.innerHTML='<span></span> Falar com a AFA-LRR';
+const panel=document.createElement('aside');panel.className='afa-panel';panel.setAttribute('aria-label','Assistente AFA-LRR');
+panel.innerHTML=`<div class="afa-head"><div class="afa-title"><strong>AFA-LRR</strong><span>Assistente territorial do Instituto Flávio Araújo</span></div><button class="afa-close" type="button" aria-label="Fechar">×</button></div><div class="afa-body"><p class="afa-intro">Escolha uma pergunta rápida. A AFA-LRR orienta sobre o Instituto de forma institucional, leve e educativa.</p><div class="afa-options"><button class="afa-question" data-answer="instituto">O que é o Instituto?</button><button class="afa-question" data-answer="zeroadois">O que é o projeto 0 a 2?</button><button class="afa-question" data-answer="soberania">O que é soberania territorial?</button><button class="afa-question" data-answer="participar">Como participar?</button><button class="afa-question" data-answer="termo">Como assinar o termo?</button><button class="afa-question" data-answer="jornada">Como funciona a jornada?</button><button class="afa-question" data-answer="territorios">O que são os 27 territórios?</button><button class="afa-question" data-answer="representatividade">O que é representatividade territorial?</button></div><div class="afa-answer" id="afaAnswer" hidden><h4></h4><p></p><audio class="afa-audio" controls hidden></audio></div></div><div class="afa-foot">AFA-LRR é uma presença institucional educativa. Não orienta voto, não faz promessa eleitoral e não substitui atendimento jurídico ou administrativo.</div>`;
+document.body.appendChild(button);document.body.appendChild(panel);
+button.addEventListener('click',()=>panel.classList.toggle('open'));
+panel.querySelector('.afa-close').addEventListener('click',()=>panel.classList.remove('open'));
+panel.querySelectorAll('.afa-question').forEach(q=>{q.addEventListener('click',()=>{const item=answers[q.dataset.answer];const box=panel.querySelector('#afaAnswer');const audio=box.querySelector('audio');box.hidden=false;box.querySelector('h4').textContent=item.title;box.querySelector('p').textContent=item.text;if(item.audio){audio.src=item.audio;audio.hidden=false;audio.play().catch(()=>{});}else{audio.hidden=true;audio.removeAttribute('src');}});});
+}
+if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',createAssistant);}else{createAssistant();}
+})();
