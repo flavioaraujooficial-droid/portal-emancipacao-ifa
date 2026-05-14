@@ -67,3 +67,44 @@
     min-height: 340px;
   }
 }
+
+.trindade-hero {
+  min-height: auto !important;
+  padding: 28px 18px 36px !important;
+}
+
+.hero-copy {
+  margin-bottom: 14px !important;
+}
+
+.hero-copy h1 {
+  font-size: clamp(2.2rem, 4.8vw, 4.6rem) !important;
+  margin: 10px auto 12px !important;
+}
+
+.lead {
+  font-size: 1.05rem !important;
+  line-height: 1.55 !important;
+}
+
+.trindade-carousel {
+  width: min(820px, 100%) !important;
+}
+
+.carousel-track,
+.trindade-slide {
+  min-height: 260px !important;
+}
+
+.trindade-slide {
+  padding: 26px 34px !important;
+}
+
+.trindade-slide h2 {
+  font-size: clamp(1.8rem, 3.6vw, 3.2rem) !important;
+}
+
+.live-pulse {
+  width: min(820px, 100%) !important;
+  margin-top: 16px !important;
+}
