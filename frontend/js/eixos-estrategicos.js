@@ -1,0 +1,1 @@
+console.log('Eixos Estratégicos IFA carregado.');
