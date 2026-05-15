@@ -1,1 +1,109 @@
-body{margin:0;font-family:Inter,Arial,sans-serif;background:#050b18;color:#fff}.hero-v3{min-height:92vh;display:flex;align-items:center;justify-content:center;padding:120px 24px 100px;background:linear-gradient(rgba(3,8,18,.68),rgba(3,8,18,.76)),url('/assets/territorios/alagoinhas.webp') center/cover no-repeat;text-align:center}.hero-content{max-width:920px}.eyebrow{color:#F2C230;font-weight:900;letter-spacing:.14em;text-transform:uppercase;font-size:.78rem}.eyebrow.dark{color:#b37b00}.hero-v3 h1{font-family:Merriweather,serif;font-size:clamp(3.2rem,8vw,6.6rem);line-height:.92;margin:20px 0}.hero-subtitle{max-width:760px;margin:0 auto;font-size:1.15rem;line-height:1.85;color:rgba(255,255,255,.82)}.hero-cta{display:inline-flex;margin-top:34px;padding:16px 28px;border-radius:999px;background:#F2C230;color:#081b3a;font-weight:900;text-decoration:none}.eixos-section{background:#f6f1e7;padding:90px 24px;color:#17212f}.section-heading{max-width:1180px;margin:0 auto 34px}.section-heading h2{font-family:Merriweather,serif;font-size:clamp(2.2rem,4vw,4rem);line-height:1;margin:12px 0 0;color:#081b3a}.eixos-grid{max-width:1180px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.eixo-card{background:#fff;border-radius:30px;padding:30px;box-shadow:0 22px 70px rgba(8,27,58,.16)}.eixo-symbol{font-size:2rem}.eixo-card h3{font-family:Merriweather,serif;font-size:1.7rem;color:#081b3a}.eixo-card p{line-height:1.75;color:#475467}.eixo-card a{font-weight:900;text-decoration:none;color:#081b3a}.dados-vivos{background:#08111f;padding:30px 24px;display:flex;justify-content:center;align-items:center;gap:26px;flex-wrap:wrap}.dado-item{display:flex;align-items:baseline;gap:10px}.dado-item strong{font-size:2rem;color:#F2C230}.dado-item span{color:rgba(255,255,255,.72);font-weight:700}.divider{width:1px;height:28px;background:rgba(255,255,255,.12)}.institucional-v3{background:#f8f4eb;padding:90px 24px;display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap;color:#17212f}.institucional-copy{max-width:780px}.institucional-copy h2{font-family:Merriweather,serif;font-size:clamp(2.2rem,4vw,4.5rem);line-height:1;color:#081b3a}.institucional-copy p{font-size:1.05rem;line-height:1.9;color:#475467}.institucional-btn{padding:16px 28px;border-radius:999px;background:#081b3a;color:#fff;font-weight:900;text-decoration:none}@media(max-width:920px){.eixos-grid{grid-template-columns:1fr}.hero-v3{min-height:82vh}.divider{display:none}}
+body{margin:0;font-family:Inter,Arial,sans-serif;background:#050b18;color:#fff}.hero-v3{min-height:92vh;display:flex;align-items:center;justify-content:center;padding:120px 24px 100px;background:linear-gradient(rgba(3,8,18,.68),rgba(3,8,18,.76)),url('/assets/territorios/alagoinhas.webp') center/cover no-repeat;text-align:center}.hero-content{max-width:920px}.eyebrow{color:#F2C230;font-weight:900;letter-spacing:.14em;text-transform:uppercase;font-size:.78rem}.eyebrow.dark{color:#b37b00}.hero-v3 h1{font-family:Merriweather,serif;font-size:clamp(3.2rem,8vw,6.6rem);line-height:.92;margin:20px 0}.hero-subtitle{max-width:760px;margin:0 auto;font-size:1.15rem;line-height:1.85;color:rgba(255,255,255,.82)}.hero-cta{display:inline-flex;margin-top:34px;padding:16px 28px;border-radius:999px;background:#F2C230;color:#081b3a;font-weight:900;text-decoration:none}.eixos-section{background:#f6f1e7;padding:90px 24px;color:#17212f}.section-heading{max-width:1180px;margin:0 auto 34px}.section-heading h2{font-family:Merriweather,serif;font-size:clamp(2.2rem,4vw,4rem);line-height:1;margin:12px 0 0;color:#081b3a}.eixos-grid{max-width:1180px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.eixo-card{background:#fff;border-radius:30px;padding:30px;box-shadow:0 22px 70px rgba(8,27,58,.16)}.eixo-symbol{font-size:2rem}.eixo-card h3{font-family:Merriweather,serif;font-size:1.7rem;color:#081b3a}.eixo-card p{line-height:1.75;color:#475467}.eixo-card a{font-weight:900;text-decoration:none;color:#081b3a}.dados-vivos{background:#08111f;padding:30px 24px;display:flex;justify-content:center;align-items:center;gap:26px;flex-wrap:wrap}.dado-item{display:flex;align-items:baseline;gap:10px}.dado-item strong{font-size:2rem;color:#F2C230}.dado-item span{color:rgba(255,255,255,.72);font-weight:700}.divider{width:1px;height:28px;background:rgba(255,255,255,.12)}.institucional-v3{background:#f8f4eb;padding:90px 24px;display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap;color:#17212f}.institucional-copy{max-width:780px}.institucional-copy h2{font-family:Merriweather,serif;font-size:clamp(2.2rem,4vw,4.5rem);line-height:1;color:#081b3a}.institucional-copy p{font-size:1.05rem;line-height:1.9;color:#475467}.institucional-btn{padding:16px 28px;border-radius:999px;background:#081b3a;color:#fff;font-weight:900;text-decoration:none}@media(max-width:920px){.eixos-grid{grid-template-columns:1fr}.hero-v3{min-height:82vh}.divider{display:none}}/* HEADER V3 */
+
+.ifa-header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 42px;
+background:rgba(5,11,24,.72);
+backdrop-filter:blur(14px);
+z-index:999;
+border-bottom:1px solid rgba(255,255,255,.06);
+}
+
+.ifa-brand-wrap{
+display:flex;
+flex-direction:column;
+gap:4px;
+}
+
+.ifa-brand{
+font-size:1.2rem;
+font-weight:900;
+color:#fff;
+text-decoration:none;
+}
+
+.ifa-brand-wrap span{
+font-size:.72rem;
+letter-spacing:.14em;
+text-transform:uppercase;
+color:rgba(255,255,255,.62);
+}
+
+.ifa-nav{
+display:flex;
+gap:22px;
+flex-wrap:wrap;
+}
+
+.ifa-nav a{
+color:rgba(255,255,255,.82);
+text-decoration:none;
+font-weight:700;
+transition:.3s;
+}
+
+.ifa-nav a:hover{
+color:#F2C230;
+}
+
+/* FOOTER V3 */
+
+.ifa-footer{
+background:#050b18;
+padding:60px 28px;
+display:flex;
+justify-content:space-between;
+gap:28px;
+flex-wrap:wrap;
+border-top:1px solid rgba(255,255,255,.08);
+}
+
+.ifa-footer strong{
+display:block;
+margin-bottom:12px;
+font-size:1.1rem;
+}
+
+.ifa-footer p{
+max-width:420px;
+line-height:1.7;
+color:rgba(255,255,255,.62);
+}
+
+.ifa-footer nav{
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+
+.ifa-footer nav a{
+color:rgba(255,255,255,.72);
+text-decoration:none;
+}
+
+.ifa-footer span{
+color:rgba(255,255,255,.42);
+}
+
+/* MOBILE */
+
+@media(max-width:920px){
+
+.ifa-header{
+padding:18px 22px;
+flex-direction:column;
+align-items:flex-start;
+gap:18px;
+}
+
+.ifa-nav{
+gap:14px;
+}
+
+}
