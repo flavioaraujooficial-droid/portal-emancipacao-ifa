@@ -1,1 +1,79 @@
-<!doctype html><html lang='pt-BR'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Representação Popular</title><link rel='stylesheet' href='/css/representacao-popular.css'></head><body><header class='rp-header'><a class='brand' href='/'>Instituto Flávio Araújo</a><nav><a href='/'>Início</a><a href='/capsula-amanha'>Cápsula</a><a href='/soberania-territorial'>Territórios</a><a href='/pulso-territorial'>Pulso Territorial</a></nav></header><main><section class='rp-hero'><p class='eyebrow'>Escuta Pública Territorial</p><h1>A Bahia também precisa ser escutada.</h1><p class='lead'>Este espaço existe para registrar vozes, percepções e experiências dos territórios da Bahia.</p></section><section class='rp-grid'><article class='rp-card'><span>01</span><h2>Participação Pública</h2><p>A participação cidadã fortalece os territórios.</p></article><article class='rp-card'><span>02</span><h2>Representatividade Territorial</h2><p>Cada território possui identidade e prioridades próprias.</p></article><article class='rp-card'><span>03</span><h2>Escuta Humana</h2><p>O Instituto amplia participação pública e diálogo territorial.</p></article></section><section class='rp-form-section'><div class='rp-form-copy'><p class='eyebrow dark'>Participar</p><h2>Registrar minha voz</h2><p>Compartilhe percepções, experiências e prioridades do seu território.</p></div><form class='rp-form'><label>Nome<input type='text' placeholder='Seu nome'></label><label>Cidade<input type='text' placeholder='Sua cidade'></label><label>Território<input type='text' placeholder='Seu território'></label><label>Mensagem<textarea placeholder='Compartilhe sua percepção'></textarea></label><button type='button'>Registrar participação</button></form></section></main><footer class='rp-footer'><strong>Instituto Flávio Araújo</strong><span>Participação • Território • Escuta Pública</span></footer><script src='/js/representacao-popular.js'></script></body></html>
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Representação Popular | Escuta Pública Territorial</title>
+<meta name="description" content="Escuta Pública Territorial da Bahia pelo Instituto Flávio Araújo.">
+<link rel="stylesheet" href="/css/representacao-popular.css">
+</head>
+<body>
+<header class="rp-header">
+<a class="brand" href="/">Instituto Flávio Araújo</a>
+<nav>
+<a href="/">Início</a>
+<a href="/capsula-amanha">Cápsula</a>
+<a href="/soberania-territorial">Territórios</a>
+<a href="/pulso-territorial">Pulso Territorial</a>
+<a href="/eixos-estrategicos">Eixos</a>
+</nav>
+</header>
+
+<main>
+<section class="rp-hero">
+<p class="eyebrow">Escuta Pública Territorial</p>
+<h1>A Bahia também precisa ser escutada.</h1>
+<p class="hero-line">Antes de propor, o Instituto escuta.</p>
+<p class="lead">Este espaço existe para registrar percepções, prioridades e experiências dos territórios da Bahia. As informações ajudam a construir diagnósticos públicos, inteligência territorial e propostas técnicas orientadas pela realidade das cidades.</p>
+</section>
+
+<section class="rp-grid">
+<article class="rp-card"><span>01</span><h2>Participação Pública</h2><p>A participação cidadã fortalece a capacidade dos territórios influenciarem prioridades públicas e caminhos coletivos.</p></article>
+<article class="rp-card"><span>02</span><h2>Representatividade Territorial</h2><p>Cada território possui identidade, desafios e vocações próprias. O Instituto busca ampliar escuta, pertencimento e presença regional.</p></article>
+<article class="rp-card"><span>03</span><h2>Inteligência Social</h2><p>As informações recebidas ajudam a identificar demandas sociais, oportunidades econômicas e prioridades humanas da Bahia.</p></article>
+</section>
+
+<section class="rp-form-section">
+<div class="rp-form-copy">
+<p class="eyebrow dark">Registrar percepção</p>
+<h2>O que precisa mudar hoje no seu território?</h2>
+<p>O objetivo não é coletar apoio eleitoral. É compreender problemas reais, prioridades locais e caminhos possíveis para formular diagnósticos territoriais mais responsáveis.</p>
+<div class="territory-note"><strong>Os territórios falam.</strong><span>Escutar a realidade regional é o primeiro passo para propor soluções com seriedade.</span></div>
+</div>
+
+<form class="rp-form" id="rpForm">
+<label>Nome<input name="nome" type="text" placeholder="Seu nome"></label>
+<label>Cidade<input name="cidade" type="text" placeholder="Sua cidade"></label>
+<label>Território de identidade<input name="territorio" type="text" placeholder="Ex: Litoral Norte, Recôncavo, Sertão..."></label>
+<label>WhatsApp opcional<input name="whatsapp" type="text" placeholder="Opcional"></label>
+<label>Principal problema da sua cidade hoje
+<select name="tema">
+<option value="">Selecione uma área</option>
+<option>Emprego</option><option>Saúde</option><option>Educação</option><option>Segurança</option><option>Água</option><option>Juventude</option><option>Agricultura</option><option>Transporte</option><option>Infraestrutura</option><option>Empreendedorismo</option><option>Outro</option>
+</select></label>
+<label>O que precisa mudar primeiro?<textarea name="mudanca" placeholder="Descreva de forma simples o que deveria ser prioridade"></textarea></label>
+<label>Como isso afeta sua vida ou sua comunidade?<textarea name="impacto" placeholder="Conte sua percepção territorial"></textarea></label>
+<div class="rp-checks">
+<label><input type="checkbox" name="acompanhar"> Desejo acompanhar iniciativas do Instituto</label>
+<label><input type="checkbox" name="lgpd" required> Autorizo o uso institucional das informações para escuta pública territorial, respeitando a LGPD</label>
+</div>
+<button type="submit">Registrar participação</button>
+<p class="form-status" id="formStatus"></p>
+</form>
+</section>
+
+<section class="intelligence-section">
+<div><p class="eyebrow dark">Centro de Inteligência Territorial</p><h2>Como sua participação será tratada?</h2><p>Os relatos serão organizados por cidade, território e tema. O Instituto poderá gerar leituras agregadas sobre prioridades públicas, sem expor dados pessoais individualmente.</p></div>
+<div class="intelligence-grid">
+<div><strong>Tema</strong><span>Emprego, saúde, educação, água, juventude...</span></div>
+<div><strong>Urgência</strong><span>Baixa, média ou alta, conforme recorrência e impacto.</span></div>
+<div><strong>Território</strong><span>Leitura por cidade, região e identidade territorial.</span></div>
+<div><strong>Proposta</strong><span>Diagnósticos que podem orientar soluções técnicas.</span></div>
+</div>
+</section>
+</main>
+
+<footer class="rp-footer"><strong>Instituto Flávio Araújo</strong><span>Escuta Pública Territorial • Bahia • Brasil • 2026</span></footer>
+<script src="/js/representacao-popular.js"></script>
+</body>
+</html>
