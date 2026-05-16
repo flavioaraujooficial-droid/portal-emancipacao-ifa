@@ -1,1 +1,30 @@
-<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Painel Secretário</title><link rel="stylesheet" href="/css/style.css"></head><body><header class="header"><div class="container top"><a class="logo" href="/">Portal Emancipação IFA</a></div></header><section class="section"><div class="container grid2"><div><span class="eyebrow">Área restrita</span><h1 style="color:var(--azul)">Painel do secretário.</h1><p class="lead">Acesso administrativo para acompanhar cápsulas, signatários e atividade territorial.</p></div><div class="card"><h2>Login</h2><form id="loginForm" class="form"><input name="username" placeholder="Usuário" required><input name="password" type="password" placeholder="Senha" required><button class="btn btn-primary">Entrar</button></form><p class="lead" style="font-size:.95rem">Após login, a API /api/admin/dashboard retorna os dados protegidos.</p></div></div></section><script src="/js/app.js"></script></body></html>
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Admin | Instituto Flávio Araújo</title>
+<link rel="stylesheet" href="/css/admin.css">
+</head>
+<body>
+<main class="admin-shell">
+<section class="admin-hero">
+<p class="eyebrow">Centro de Inteligência Territorial</p>
+<h1>Painel Administrativo</h1>
+<p>Área restrita para acompanhamento institucional, escuta pública e organização territorial.</p>
+</section>
+<section class="admin-grid">
+<article class="admin-card"><span>01</span><h2>Representação Popular</h2><p>Envios da Escuta Pública Territorial.</p><a href="/representacao-popular">Abrir página</a></article>
+<article class="admin-card"><span>02</span><h2>Cápsula do Amanhã</h2><p>Mensagens, legado e registros de futuro.</p><a href="/capsula-amanha">Abrir página</a></article>
+<article class="admin-card"><span>03</span><h2>Pulso Territorial</h2><p>Rastro público da jornada e registros de campo.</p><a href="/pulso-territorial">Abrir página</a></article>
+<article class="admin-card"><span>04</span><h2>Eixos Estratégicos</h2><p>Diretrizes institucionais e teses estruturantes.</p><a href="/eixos-estrategicos">Abrir página</a></article>
+</section>
+<section class="admin-status">
+<div><strong>Status</strong><span>Portal público ativo</span></div>
+<div><strong>Próxima etapa</strong><span>Conectar formulários</span></div>
+<div><strong>Segurança</strong><span>Acesso restrito por senha</span></div>
+</section>
+</main>
+<script src="/js/admin.js"></script>
+</body>
+</html>
