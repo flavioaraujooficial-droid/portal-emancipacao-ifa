@@ -25,7 +25,9 @@ FRONTEND = ROOT / 'frontend'
 
 # Montagem de Arquivos Estáticos
 app.mount('/css', StaticFiles(directory=FRONTEND / 'css'), name='css')
-app.mount('/js', StaticFiles(directory=FRONTEND / 'js'), name='js')
+app.mount('/js', StaticFiles(directory=FRONTEND / 'js'), name='js') 
+
+app.mount('/assets', StaticFiles(directory=FRONTEND / 'assets'), name='assets')
 
 # Inclusão de Rotas
 app.include_router(public_router)
