@@ -20,7 +20,7 @@ app.state.limiter = limiter
 app.add_middleware(SlowAPIMiddleware)
 
 # Definição de Caminhos
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parent.parent
 FRONTEND = ROOT / 'frontend'
 
 # Montagem de Arquivos Estáticos
