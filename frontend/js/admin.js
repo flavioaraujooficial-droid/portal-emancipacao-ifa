@@ -1,0 +1,1 @@
+console.log('Admin Alpha IFA carregado.');
