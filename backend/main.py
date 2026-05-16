@@ -1,20 +1,43 @@
 import os
+import secrets
 from pathlib import Path
-from fastapi import FastAPI
+
+from fastapi import FastAPI, Depends, HTTPException, status
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
+from fastapi.security import HTTPBasic, HTTPBasicCredentials
+
 from slowapi import Limiter
 from slowapi.util import get_remote_address
 from slowapi.middleware import SlowAPIMiddleware
 
-# Ajuste de importação: removendo o prefixo 'backend.' para funcionar dentro da pasta
 from database import init_db
 from routes.public import router as public_router
 from routes.admin import router as admin_router
 
+
 app = FastAPI(title='Portal Emancipação IFA', version='1.0.0')
 
-# Configuração do Limitador (Trava de Segurança contra robôs)
+# Segurança básica do painel administrativo
+security = HTTPBasic()
+
+def verificar_admin(credentials: HTTPBasicCredentials = Depends(security)):
+    admin_user = os.getenv("ADMIN_USER", "admin")
+    admin_pass = os.getenv("ADMIN_PASS", "trocar-esta-senha")
+
+    usuario_ok = secrets.compare_digest(credentials.username, admin_user)
+    senha_ok = secrets.compare_digest(credentials.password, admin_pass)
+
+    if not (usuario_ok and senha_ok):
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Acesso administrativo não autorizado",
+            headers={"WWW-Authenticate": "Basic"},
+        )
+    return credentials.username
+
+
+# Configuração do Limitador
 limiter = Limiter(key_func=get_remote_address)
 app.state.limiter = limiter
 app.add_middleware(SlowAPIMiddleware)
@@ -36,9 +59,15 @@ if js_dir.exists():
 
 if assets_dir.exists():
     app.mount('/assets', StaticFiles(directory=assets_dir), name='assets')
+
 # Inclusão de Rotas
 app.include_router(public_router)
 app.include_router(admin_router)
+
+
+@app.get('/admin')
+async def admin_area(usuario: str = Depends(verificar_admin)):
+    return FileResponse(FRONTEND / 'admin.html')
 
 @app.on_event('startup')
 async def startup():
@@ -77,8 +106,7 @@ async def signatarios(): return FileResponse(FRONTEND / 'signatarios.html')
 
 @app.get('/do-0-a-2.html')
 async def do_0_a_2_html():
-    return FileResponse(FRONTEND / 'do-0-a-2.html')  
-
+    return FileResponse(FRONTEND / 'do-0-a-2.html') 
 
 @app.get('/do-0-a-2')
 async def do_0_a_2():
