@@ -19,6 +19,20 @@ limiter = Limiter(key_func=get_remote_address)
 app.state.limiter = limiter
 app.add_middleware(SlowAPIMiddleware)
 
+# Montagem de Arquivos Estáticos
+css_dir = FRONTEND / 'css'
+js_dir = FRONTEND / 'js'
+assets_dir = FRONTEND / 'assets'
+
+if css_dir.exists():
+    app.mount('/css', StaticFiles(directory=css_dir), name='css')
+
+if js_dir.exists():
+    app.mount('/js', StaticFiles(directory=js_dir), name='js')
+
+if assets_dir.exists():
+    app.mount('/assets', StaticFiles(directory=assets_dir), name='assets')
+
 # Definição de Caminhos
 ROOT = Path(__file__).resolve().parent.parent
 FRONTEND = ROOT / 'frontend'
