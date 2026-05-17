@@ -64,11 +64,7 @@ if assets_dir.exists():
 app.include_router(public_router)
 app.include_router(admin_router)
 
-
-@app.get('/admin')
-async def admin_area(usuario: str = Depends(verificar_admin)):
-    return FileResponse(FRONTEND / 'admin.html')
-
+app.include_router(admin_router)
 @app.on_event('startup')
 async def startup():
     # Só tenta ligar o banco se a URL existir
