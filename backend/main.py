@@ -79,6 +79,10 @@ async def startup():
         except Exception as e:
             print(f"❌ Erro ao iniciar banco de dados: {e}")
 
+@app.get('/admin')
+async def admin_area(usuario: str = Depends(verificar_admin)):
+    return FileResponse(FRONTEND / 'admin.html')
+
 # Rotas de Navegação (Páginas)
 @app.get('/')
 async def index(): return FileResponse(FRONTEND / 'index.html')
