@@ -60,6 +60,10 @@ if js_dir.exists():
 if assets_dir.exists():
     app.mount('/assets', StaticFiles(directory=assets_dir), name='assets')
 
+@app.get('/admin')
+async def admin_area(usuario: str = Depends(verificar_admin)):
+    return FileResponse(FRONTEND / 'admin.html')
+
 # Inclusão de Rotas
 app.include_router(public_router)
 app.include_router(admin_router)
